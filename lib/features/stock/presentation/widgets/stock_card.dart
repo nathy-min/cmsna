@@ -1,42 +1,10 @@
 import 'package:cmsna/features/stock/presentation/pages/stock_main.dart';
 import 'package:cmsna/features/stock/presentation/widgets/card_detail.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
-// final List<Stock> stocks = [
-//   Stock(
-//     logoUrl:
-//         'https://static.vecteezy.com/system/resources/thumbnails/005/533/524/small/stock-illustration-awesome-abstract-consulting-design-logo-icon-isolated-free-vector.jpg',
-//     date: DateTime.now(),
-//     description:
-//         'Stock 1 is a growth stock that has been outperforming the market recently. It belongs to a well-established company with a large market capitalization[^1^][5].',
-//     imageUrl:
-//         'https://static.vecteezy.com/system/resources/thumbnails/005/533/524/small/stock-illustration-awesome-abstract-consulting-design-logo-icon-isolated-free-vector.jpg',
-//   ),
-//   Stock(
-//     logoUrl:
-//         'https://static.vecteezy.com/system/resources/thumbnails/005/533/524/small/stock-illustration-awesome-abstract-consulting-design-logo-icon-isolated-free-vector.jpg',
-//     date: DateTime.now(),
-//     description:
-//         'Stock 2 is a value stock that is currently trading at a discount. It belongs to a company that is expected to grow at a faster rate compared to the broader market[^2^][6].',
-//     imageUrl:
-//         'https://static.vecteezy.com/system/resources/thumbnails/005/533/524/small/stock-illustration-awesome-abstract-consulting-design-logo-icon-isolated-free-vector.jpg',
-//   ),
-//   Stock(
-//     logoUrl: 'https://example.com/logo3.png',
-//     date: DateTime.now(),
-//     description:
-//         'Stock 3 is a common stock that represents partial ownership in a corporation. It entitles investors to generated profits, usually paid in dividends[^3^][7].',
-//     imageUrl: 'https://example.com/image3.png',
-//   ),
-//   Stock(
-//     logoUrl: 'https://example.com/logo4.png',
-//     date: DateTime.now(),
-//     description:
-//         'Stock 4 is a preferred stock that entitles the holder to regular dividend payments before dividends are issued to common shareholders[^4^][8].',
-//     imageUrl: 'https://example.com/image4.png',
-//   ),
-//   // Add more stocks as needed...
-// ];
 class StockCard extends StatelessWidget {
   final Stock stock;
 
@@ -52,40 +20,60 @@ class StockCard extends StatelessWidget {
         );
       },
       child: Card(
-        color: Color.fromARGB(255, 255, 255, 255),
+        elevation: 0.0, // Add some elevation to the card for a modern look
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10), // Add rounded corners
+        ),
         child: Container(
-          height: 200, // Set the height of the card
-          width: double.infinity, // Set the width of the card
+          color: Colors.white,
+          height: 200,
+          width: double.infinity,
           child: Padding(
-            padding: const EdgeInsets.all(4.0),
+            padding: const EdgeInsets.all(16.0), // Increase the padding
             child: Column(
+              crossAxisAlignment:
+                  CrossAxisAlignment.start, // Align content to the start
               children: [
                 Row(
                   children: [
                     Image.network(stock.logoUrl, width: 30, height: 30),
                     SizedBox(width: 8),
                     Text(
-                      '${stock.date.month}/${stock.date.day}/${stock.date.year}',
-                      style: TextStyle(fontSize: 12),
-                    ),
+                      '${DateFormat.jm().format(stock.date)}. ${DateFormat.MMMd().format(stock.date)}. TradeView',
+                      style: TextStyle(fontSize: 15, color: Colors.grey),
+                    )
                   ],
                 ),
-                SizedBox(height: 2),
+                SizedBox(height: 16), // Increase the spacing
                 Row(
                   children: [
                     Expanded(
                       child: Text(
                         stock.description,
-                        maxLines: 3, // Limit the description to 2 lines
-                        overflow: TextOverflow
-                            .ellipsis, // Add ellipsis when the description is too long
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
+                        maxLines: 3,
+                        overflow: TextOverflow.ellipsis,
+                        style: GoogleFonts.radioCanada(
+                            fontSize:
+                                18.sp), // Make the description text darker
                       ),
                     ),
-                    SizedBox(width: 8),
-                    Image.network(stock.imageUrl, width: 100, height: 100),
+                    SizedBox(width: 16), // Increase the spacing
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(
+                          10), // Add rounded corners to the image
+                      child: Image.network(stock.imageUrl,
+                          width: 100, height: 100),
+                    ),
                   ],
+                ),
+                Container(
+                  height: 1.0,
+                  width: double.infinity,
+                  color: Colors.grey,
+                  margin: const EdgeInsets.only(
+                      top: 2.0,
+                      bottom: 2.0), // Same as `blurRadius` in BoxShadow
+                  child: Divider(),
                 ),
               ],
             ),

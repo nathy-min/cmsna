@@ -74,7 +74,7 @@ class _StockPageState extends State<StockPage> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Container(), // Removed 'Explore Markets' from the AppBar
+        title: Container(),
         actions: [
           IconButton(
             icon: Icon(
@@ -87,7 +87,7 @@ class _StockPageState extends State<StockPage> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 5.w),
+          padding: EdgeInsets.symmetric(horizontal: 3.w),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
