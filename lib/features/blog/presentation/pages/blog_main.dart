@@ -2,6 +2,7 @@ import 'package:cmsna/features/blog/domain/entities/blog_response.dart';
 import 'package:cmsna/features/blog/presentation/bloc/blog_bloc/blog_bloc.dart';
 import 'package:cmsna/features/blog/presentation/pages/blog_detail.dart';
 import 'package:cmsna/features/home/presentation/widgets/blog_card.dart';
+import 'package:cmsna/features/home/presentation/widgets/custom_navigation_bar.dart';
 import 'package:cmsna/features/home/presentation/widgets/shimmer_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -25,6 +26,7 @@ class _BlogPageState extends State<BlogPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: CustomNavigationBar(initialIndex: 6),
       appBar: AppBar(
         actions: <Widget>[
           IconButton(

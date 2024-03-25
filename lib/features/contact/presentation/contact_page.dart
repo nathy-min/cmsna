@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../home/presentation/widgets/custom_navigation_bar.dart';
+
 class ContactMePage extends StatefulWidget {
   @override
   _ContactMePageState createState() => _ContactMePageState();
@@ -19,6 +21,9 @@ class _ContactMePageState extends State<ContactMePage> {
       // appBar: AppBar(
       //   title: Text('Contact Me'),
       // ),
+      bottomNavigationBar: CustomNavigationBar(
+        initialIndex: 3,
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: SingleChildScrollView(

@@ -1,5 +1,7 @@
 import 'package:cmsna/app.dart';
 import 'package:cmsna/features/blog/presentation/bloc/blog_bloc/blog_bloc.dart';
+import 'package:cmsna/features/home/presentation/bloc/menu_bloc.dart';
+import 'package:cmsna/features/home/presentation/pages/homepage.dart';
 
 import 'package:cmsna/injection_container.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +14,6 @@ void main() async {
   runApp(const App());
 }
 
-
 class App extends StatelessWidget {
   const App({super.key});
 
@@ -23,11 +24,12 @@ class App extends StatelessWidget {
       builder: (context, orientation, screenType) {
         return MultiBlocProvider(
           providers: [
-            BlocProvider(create: (context) => serviceLocator<BlogBloc>())
+            BlocProvider(create: (context) => serviceLocator<BlogBloc>()),
+            BlocProvider(create: (context) => serviceLocator<MenuBloc>()),
           ],
           child: MaterialApp(
             debugShowCheckedModeBanner: false,
-            home: MainPage(),
+            home: Homepage(),
           ),
         );
       },

@@ -1,0 +1,65 @@
+{
+    "menu": [
+      {
+        "image": "https://t4.ftcdn.net/jpg/03/49/37/73/360_F_349377375_ffnj0RHK52KsooH7IBdtpjNtdEP7bKM7.jpg",
+        "name": "Blog",
+        "next": "endpointOfAPI"
+      },
+      {
+        "image": "https://cdn5.vectorstock.com/i/1000x1000/67/79/stair-stock-market-business-logo-icon-design-vector-22926779.jpg",
+        "name": "Stock",
+        "next": "endpointOfAPI"
+      },
+      {
+        "image": "https://www.shutterstock.com/image-illustration/super-sport-car-on-white-260nw-397995106.jpg",
+        "name": "Car Insurance",
+        "next": "endpointOfAPI"
+      },
+      {
+        "image": "https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/512x512/shadow/airplane2.png",
+        "name": "Travel Insurance",
+        "next": "endpointOfAPI"
+      },
+      {
+        "image": "https://cdn-icons-png.freepik.com/512/10017/10017583.png",
+        "name": "Investment Plans",
+        "next": "endpointOfAPI"
+      },
+      {
+        "image": "https://kashmirobserver.net/wp-content/uploads/2023/05/Guaranteed-Returns.jpg",
+        "name": "Guaranteed Returns",
+        "next": "endpointOfAPI"
+      },
+      {
+        "image": "https://i.pinimg.com/originals/1d/a2/1d/1da21df8f5b210a1ee3d46aed5c0c0a6.jpg",
+        "name": "Two Wheeler Insurance",
+        "next": "endpointOfAPI"
+      },
+      {
+        "image": "https://img.freepik.com/free-vector/woman-keeping-coin-with-piggy-bank-saving-money-concept-cute-cartoon-character-doodle-style_40876-3219.jpg",
+        "name": "Child Savings Plans",
+        "next": "endpointOfAPI"
+      },
+      {
+        "image": "https://i.pinimg.com/736x/22/3d/23/223d23c854a3848b1358d6180f5c9f0f.jpg",
+        "name": "Term Life (Women)",
+        "next": "endpointOfAPI"
+      },
+      {
+        "image": "https://cdn-icons-png.flaticon.com/512/7051/7051035.png",
+        "name": "Family Health Insurance",
+        "next": "endpointOfAPI"
+      },
+      {
+        "image": "https://cdn-icons-png.flaticon.com/512/4784/4784919.png",
+        "name": "Retirement Plan",
+        "next": "endpointOfAPI"
+      },
+      {
+        "image": "https://cdn-icons-png.flaticon.com/512/1207/1207864.png",
+        "name": "Employee Health Plan",
+        "next": "endpointOfAPI"
+      }
+    ]
+  }
+  

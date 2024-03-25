@@ -89,6 +89,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.6"
+  curved_labeled_navigation_bar:
+    dependency: "direct main"
+    description:
+      name: curved_labeled_navigation_bar
+      sha256: "2404496badcadcb94b6bd0d3a49bfa11a7b952c41c1b2ab917ec8d1450d132e9"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.2"
   dartz:
     dependency: "direct main"
     description:
@@ -195,6 +203,11 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_web_plugins:
+    dependency: transitive
+    description: flutter
+    source: sdk
+    version: "0.0.0"
   font_awesome_flutter:
     dependency: "direct main"
     description:
@@ -211,6 +224,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "7.6.7"
+  go_router:
+    dependency: "direct main"
+    description:
+      name: go_router
+      sha256: "7ecb2f391edbca5473db591b48555a8912dde60edd0fb3013bd6743033b2d3f8"
+      url: "https://pub.dev"
+    source: hosted
+    version: "13.2.1"
   google_fonts:
     dependency: "direct main"
     description:
@@ -251,6 +272,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
+  logging:
+    dependency: transitive
+    description:
+      name: logging
+      sha256: "623a88c9594aa774443aa3eb2d41807a48486b5613e67599fb4c41c0ad47c340"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.0"
   matcher:
     dependency: transitive
     description:
