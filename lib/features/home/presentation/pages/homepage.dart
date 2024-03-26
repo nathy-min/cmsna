@@ -49,7 +49,7 @@ class _HomepageState extends State<Homepage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(
-                      height: 1.2.h,
+                      height: 2.2.h,
                     ),
                     Text(
                       'Hey, There 👋',
@@ -147,30 +147,28 @@ class MenuCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(right: 4.w, bottom: 2.5.h),
-      child: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Container(
-              height: 5.h,
-              width: 18.w,
-              child: Center(
-                child: Image.network(
-                  imageUrl,
-                  fit: BoxFit.cover,
-                ),
-              ),
-              decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 255, 255, 255),
-                  borderRadius: BorderRadius.circular(10)),
+      padding: EdgeInsets.only(right: 4.w, bottom: 1.h),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+            height: 6.5.h,
+            width: 18.5.w,
+            child: Center(
+              child: title == 'Blog'
+                  ? Icon(Icons.article, color: Colors.black, size: 30.0.px)
+                  : title == 'Stock'
+                      ? Icon(Icons.show_chart,
+                          color: const Color.fromARGB(255, 230, 45, 45),
+                          size: 30.0.px)
+                      : Image.asset(imageUrl, fit: BoxFit.cover),
             ),
-            ...title
-                .split(' ')
-                .map((word) => Center(child: Text(word)))
-                .toList(),
-          ],
-        ),
+            decoration: BoxDecoration(
+                color: Color.fromARGB(255, 236, 235, 235),
+                borderRadius: BorderRadius.circular(10)),
+          ),
+          ...title.split(' ').map((word) => Center(child: Text(word))).toList(),
+        ],
       ),
     );
   }
